@@ -4,70 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="12dp"
+    tools:layout_editor_absoluteY="-12dp">
 
     <EditText
         android:id="@+id/number1"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="125dp"
         android:ems="10"
         android:hint="첫 번째 숫자"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/number2"
-        android:layout_width="397dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="84dp"
+        android:layout_width="362dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="두 번째  숫자"
+        android:hint="두 번째 숫자"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="6dp" />
-
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="더하기"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="172dp" />
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1" />
 
     <Button
         android:id="@+id/substractButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="31dp"
+        android:onClick="subClick"
         android:text="빼기"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="172dp" />
+        app:layout_constraintBottom_toTopOf="@+id/divideButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addButton" />
 
     <Button
-        android:id="@+id/divideButton"
+        android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="나누기"
-        tools:layout_editor_absoluteX="311dp"
-        tools:layout_editor_absoluteY="172dp" />
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="31dp"
+        android:onClick="addClick"
+        android:text="더하기"
+        app:layout_constraintBottom_toTopOf="@+id/multiplyButton"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/multiplyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="318dp"
+        android:onClick="mulClick"
         android:text="곱하기"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="172dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/divideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="318dp"
+        android:onClick="divideClick"
+        android:text="나누기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/multiplyButton" />
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="385dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="244dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="232dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
